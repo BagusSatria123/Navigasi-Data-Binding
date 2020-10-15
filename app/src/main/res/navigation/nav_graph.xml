@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.bagus.navigation_bla.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+        <argument
+            android:name="namaMahasiswa"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="jenisKelamin"
+            app:argType="string"
+            android:defaultValue="jk" />
+        <argument
+            android:name="statusKawin"
+            app:argType="string"
+            android:defaultValue="statusKawin" />
+        <argument
+            android:name="agama"
+            app:argType="string"
+            android:defaultValue="agama" />
+        <argument
+            android:name="kewarganegaraan"
+            app:argType="string"
+            android:defaultValue="kewarganegaraan" />
+        <argument
+            android:name="alamatSurat"
+            app:argType="string" />
+        <argument
+            android:name="alamatAsal"
+            app:argType="string" />
+        <argument
+            android:name="kota"
+            app:argType="string" />
+        <argument
+            android:name="provinsi"
+            app:argType="string" />
+        <argument
+            android:name="noRumah"
+            app:argType="string" />
+        <argument
+            android:name="noHp"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <argument
+            android:name="namaOrtu"
+            app:argType="string" />
+        <argument
+            android:name="asalPerguruan"
+            app:argType="string" />
+        <argument
+            android:name="prodi"
+            app:argType="string" />
+        <argument
+            android:name="akreditasi"
+            app:argType="string" />
+        <argument
+            android:name="pilihanA"
+            app:argType="string" />
+        <argument
+            android:name="pilihanB"
+            app:argType="string" />
+        <argument
+            android:name="asalSekolah"
+            app:argType="string" />
+        <argument
+            android:name="alamatSekolah"
+            app:argType="string" />
+        <argument
+            android:name="kotaSekolah"
+            app:argType="string" />
+        <argument
+            android:name="provinsiSekolah"
+            app:argType="string" />
+        <argument
+            android:name="tahunLulus"
+            app:argType="string" />
+        <argument
+            android:name="jmlNilai"
+            app:argType="string" />
+        <argument
+            android:name="jmlMapel"
+            app:argType="string" />
+        <argument
+            android:name="jurusanSekolah"
+            app:argType="string" />
+        <argument
+            android:name="statusSekolah"
+            app:argType="string" />
+        <argument
+            android:name="jmlSumbangan"
+            app:argType="string" />
+        <argument
+            android:name="TidakMampu"
+            app:argType="string" />
+        <argument
+            android:name="rekomendasi"
+            app:argType="string" />
+        <argument
+            android:name="gaji"
+            app:argType="string" />
+        <argument
+            android:name="tagihan"
+            app:argType="string" />
+        <argument
+            android:name="prestasi"
+            app:argType="string" />
+        <argument
+            android:name="raport"
+            app:argType="string" />
+        <argument
+            android:name="ijasah"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.bagus.navigation_bla.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_endgameFragment"
+            app:destination="@id/endgameFragment"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endgameFragment"
+        android:name="com.bagus.navigation_bla.EndgameFragment"
+        android:label="fragment_endgame"
+        tools:layout="@layout/fragment_endgame" >
+        <action
+            android:id="@+id/action_endgameFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+    </fragment>
+</navigation>
